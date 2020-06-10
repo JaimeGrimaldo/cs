@@ -25,7 +25,7 @@ SECRET_KEY = '^y#r=*2k-gm2_&3=8d*+==2g@y2v50nd%zpkj^zokl#_y*vnu*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com']
 
 
 # Application definition
@@ -53,6 +53,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'CS.urls'
+
+SITE_1D = 1
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated',),
+    'DEFAULT_AUTHENTICATE_CLASSES':('rest_framework.authentication.TokenAuthentication',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
 
 TEMPLATES = [
     {
