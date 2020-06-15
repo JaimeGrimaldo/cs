@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include, url
 from django.contrib.auth.models import User
+from Login.views import CustomAuthtoken
 #from django.conf.urls import url
 from rest_framework_swagger.views import get_swagger_view
 
@@ -37,6 +38,7 @@ schema_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^api/v1/login', include('Login.urls')),
     re_path(r'^', include(router.urls)),
     url('Grimaldo/', schema_view),
 ]
