@@ -26,16 +26,12 @@ STATICFILES_DIRS = [
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'SECRET_KEY'
+SECRET_KEY = '^y#r=*2k-gm2_&3=8d*+==2g@y2v50nd%zpkj^zokl#_y*vnu*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com']
-=======
 ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com','*']
->>>>>>> f25c5189560cdafdaa701bf4640dde37531a69d4
 #comentario para subirar
 
 # Application definition
