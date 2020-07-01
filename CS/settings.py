@@ -32,7 +32,7 @@ SECRET_KEY = 'SECRET_KEY'
 DEBUG = False
 
 ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com']
-#comentario para subir
+#comentario para subir a
 
 # Application definition
 
