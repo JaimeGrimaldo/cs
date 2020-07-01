@@ -40,5 +40,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^', include(router.urls)),
     re_path(r'^api/v1/login', include('Login.urls')),
+    re_path(r'^api/v1/example1',include('Example1.urls')),
+    re_path(r'^appi/v1/example2',include('Example2.urls')), 
     url('Grimaldo/', schema_view),
 ]
