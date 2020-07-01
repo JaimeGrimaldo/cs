@@ -31,7 +31,7 @@ SECRET_KEY = '^y#r=*2k-gm2_&3=8d*+==2g@y2v50nd%zpkj^zokl#_y*vnu*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com']
+ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com','*']
 #comentario para subirar
 
 # Application definition
@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_swagger',
     'Login',
+    'Example1',
+    'Example2',
 
 ]
 
@@ -119,7 +121,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
-# Ya no se que hacer para que funcione :D
 
 AUTH_PASSWORD_VALIDATORS = [
     {
