@@ -15,13 +15,13 @@ from Example1.serializer import ExampleSerializer
 
 class ExampleList(APIView):
     def get(self, request, format=None):
-        print("ESTRAMOS A GET")
+        print("ESTRAMOS A GET o si")
         queryset = Example.objects.all()
         serializer = ExampleSerializer(queryset, many = True)
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        print("ENTRO A POST OSI OSI")
+        print("ENTRO A POST OSI OSIsi")
         serializer = ExampleSerializer(data = request.data)
         print("PASO EL SERIALIZER")
         if serializer.is_valid():
