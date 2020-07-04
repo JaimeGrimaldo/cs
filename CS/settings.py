@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,10 +26,13 @@ STATICFILES_DIRS = [
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^y#r=*2k-gm2_&3=8d*+==2g@y2v50nd%zpkj^zokl#_y*vnu*'
+#SECRET_KEY = '^y#r=*2k-gm2_&3=8d*+==2g@y2v50nd%zpkj^zokl#_y*vnu*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+EMAIL_HOST = config('EMAIL_HOST', default='localhost')
+EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 
 ALLOWED_HOSTS = ['clienteservidor191214.herokuapp.com','*']
 #comentario para subirar
@@ -50,7 +53,7 @@ INSTALLED_APPS = [
     'Login',
     'Example1',
     'Example2',
-
+    'Registro',
 ]
 
 SITE_ID = 1

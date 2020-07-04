@@ -7,5 +7,6 @@ from  Example1 import views
 
 
 urlpatterns = [
-    re_path(r'^/$', views.ExampleList.as_view()), 
+    re_path(r'Example1/$', views.ExampleLista.as_view()),
+    re_path(r'/details/(?P<id>\d+)$',views.ExampleDetail.as_view()),
 ]
